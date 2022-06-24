@@ -5,5 +5,21 @@
 
 
 @section('content')
-<h1>Movies</h1>
+
+<div>
+    <ul>
+        @foreach ($movies_db as $movie)
+        <hr>
+        <li>{{$movie->id}}</li>
+        <li>{{$movie->title}}</li>
+        <li>{{$movie->original_title}}</li>
+        <li>{{$movie->nationality}}</li>
+        <li>{{$movie->date}}</li>
+        <li>{{$movie->vote}}</li>
+        <hr>
+        @endforeach
+
+    </ul>
+</div>
+
 @endsection
